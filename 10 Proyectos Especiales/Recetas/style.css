@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #d3cce3; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #e9e4f0, #d3cce3); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#e9e4f0,
+		#d3cce3
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.contenedor-celular {
+	width: 400px;
+	background-color: #fff;
+	box-shadow: 0 0 5px #3333331a;
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+img {
+	max-width: 100%;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}
+
+header input {
+	border: none;
+	border-radius: 3px;
+	padding: 0.5rem 1rem;
+	background-color: #eee;
+	font-family: inherit;
+}
+
+header button {
+	background-color: transparent;
+	color: #887f87;
+	font-size: 1.5rem;
+	margin-left: 10px;
+	border: none;
+}
+
+.contenedor-favoritos {
+	padding: 1rem;
+	text-align: center;
+	background-color: #fbd6ff;
+}
+
+.platillos-favoritos {
+	flex-wrap: wrap;
+	justify-content: center;
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+}
+
+.platillos-favoritos li {
+	width: 85px;
+}
+
+.platillos-favoritos li img {
+	border: 2px solid #ffffff1a;
+	box-shadow: 0 0 5px #3333331a;
+	width: 75px;
+	height: 75px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.platillos-favoritos li span {
+	font-size: 0.9rem;
+}
+
+.comida {
+	margin: 1.5rem;
+	box-shadow: 0 0 5px #3333331a;
+	border-radius: 3px;
+}
+
+.encabezado-comida {
+	position: relative;
+}
+
+.encabezado-comida .aleatorio {
+	position: absolute;
+	top: 1rem;
+	background-color: #fff;
+	padding: 0.25rem 1rem;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.encabezado-comida img {
+	object-fit: cover;
+	height: 250px;
+	width: 100%;
+}
+
+.cuerpo-comida {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+}
+
+.cuerpo-comida h4 {
+	margin: 0;
+}
+
+.cuerpo-comida .boton-favorito {
+	background-color: transparent;
+	border: none;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+
+.cuerpo-comida .boton-favorito.active {
+	color: rebeccapurple;
+}
