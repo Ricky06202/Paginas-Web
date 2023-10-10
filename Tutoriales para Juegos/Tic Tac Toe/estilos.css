@@ -1,0 +1,139 @@
+*{
+	box-sizing: border-box;
+}
+
+:root{
+	--celda-tamaño: 100px;
+	--simbolo-tamaño: calc(var(--celda-tamaño) * .9)
+}
+
+body{
+	margin: 0;
+}
+
+.tablero{
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	grid-template-columns: repeat(3, auto);
+}
+
+.celda{
+	width: var(--celda-tamaño);
+	height: var(--celda-tamaño);
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+}
+
+.celda:nth-child(1),
+.celda:nth-child(2),
+.celda:nth-child(3){
+	border-top: none;
+}
+.celda:nth-child(3n+1){
+	border-left: none;
+}
+.celda:nth-child(3n){
+	border-right: none;
+}
+.celda:nth-child(n+7){
+	border-bottom: none;
+}
+
+.celda.x,
+.celda.o{
+	cursor: not-allowed;
+}
+
+.celda.x::after,
+.celda.x::before,
+.tablero.x .celda:not(.x):not(.o):hover::before,
+.tablero.x .celda:not(.x):not(.o):hover::after{
+	content: '';
+	position: absolute;
+	width: calc(var(--simbolo-tamaño) * .16);
+	height: var(--simbolo-tamaño);
+	background-color: black;
+}
+
+.tablero.x .celda:not(.x):not(.o):hover::before,
+.tablero.x .celda:not(.x):not(.o):hover::after{
+	background-color: gray;
+}
+
+.celda.celda.x::before,
+.tablero.x .celda:hover::before{
+	rotate: 45deg;
+}
+.celda.celda.x::after,
+.tablero.x .celda:hover::after{
+	rotate: -45deg;
+}
+
+.celda.o::after,
+.celda.o::before,
+.tablero.o .celda:not(.x):not(.o):hover::before,
+.tablero.o .celda:not(.x):not(.o):hover::after{
+	content: '';
+	position: absolute;
+	border-radius: 50%;
+}
+
+.celda.o::before,
+.tablero.o .celda:not(.x):not(.o):hover::before{
+	width: var(--simbolo-tamaño);
+	height: var(--simbolo-tamaño);
+	background-color: black;
+}
+.celda.o::after,
+.tablero.o .celda:not(.x):not(.o):hover::after{
+	width: calc(var(--simbolo-tamaño) *.7);
+	height: calc(var(--simbolo-tamaño) *.7);
+	background-color: white;
+}
+
+.tablero.o .celda:not(.x):not(.o):hover::before{
+	background-color: grey;
+}
+
+.mensaje-ganador{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000000e6;
+	display: none;
+	flex-direction: column;
+	gap: 11rem;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 5rem;
+}
+
+.mensaje-ganador button{
+	font-size: 3rem;
+	background-color: white;
+	border: 1px solid black;
+	padding: .25em .5em;
+	cursor: pointer;
+}
+
+.mensaje-ganador button:hover{
+	background-color: black;
+	color: white;
+	border-color: white;
+}
+
+.mensaje-ganador.mostrar{
+	display: flex;
+}
