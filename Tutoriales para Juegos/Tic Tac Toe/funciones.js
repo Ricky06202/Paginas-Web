@@ -1,7 +1,12 @@
 const CLASE_O = 'o', CLASE_X = 'x'
 let esTurnoX
 const COMBINACIONES_DE_VICTORIA = [
-	
+	[1,2,3],
+	[4,5,6],
+	[7,8,9],
+	[1,4,7],
+	[2,5,8],
+	[3,6,9],
 ]
 
 /** @type {HTMLButtonElement[]} */
@@ -38,8 +43,16 @@ function accionCelda(){
 	const celda = this
 	const turnoActual = esTurnoX ? CLASE_X : CLASE_O
 	ponerFicha(celda, turnoActual)
+	if(haGanado(turnoActual)){
+
+	}
+
 	cambiarTurno()
 	cambiarTurnoTablero()
+}
+
+function haGanado(turnoActual){
+	COMBINACIONES_DE_VICTORIA.some
 }
 
 function ponerFicha(celda, turnoActual){
