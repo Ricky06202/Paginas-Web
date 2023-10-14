@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=7" />
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Tienda Web</title>
-		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/index.css" />
 		<script defer src="js/index.js"></script>
 	</head>
 	<body>
 		<header>
-			<img src="img/Logo.png" alt="logo">
+			<img src="img/Logo.png" alt="logo" />
 			<nav>
 				<a href="#tiendas">Tiendas</a>
 				<a href="#categorias">Categorias</a>
@@ -18,75 +21,159 @@
 				<button id="iniciarSesion">Inicia Sesion!</button>
 			</div>
 		</header>
-		
+
 		<section class="presentacion" id="presentacion">
-			<h2>La pagina en la que puedes cotizar tus productos</h2>
-			<button>Empieza a Ya!</button>
+			<h2>La pagina para cotizar tus productos</h2>
+			<button>Empieza Ya!</button>
 		</section>
-		
+
 		<section class="tiendas" id="tiendas">
-			<div class="tienda">
-				<img src="" alt="Imagen Super 99">
-				<span>Super 99</span>
+			<div class="encabezado">
+				<h2>Tiendas Disponibles</h2>
 			</div>
-			<div class="tienda">
-				<img src="" alt="Imagen PriceMart">
-				<span>PriceMart</span>
-			</div>
-			<div class="tienda">
-				<img src="" alt="Imagen Super Extra">
-				<span>Super Extra</span>
-			</div>
-			<div class="tienda">
-				<img src="" alt="Imagen Romero">
-				<span>Romero</span>
+			<div class="contenido">
+				<div class="carta">
+					<img src="img/Super99.jpg" alt="Imagen Super 99" />
+					<h3>Super 99</h3>
+				</div>
+				<div class="carta">
+					<img src="img/Pricesmart.png" alt="Imagen PriceMart" />
+					<h3>PriceMart</h3>
+				</div>
+				<div class="carta">
+					<img src="img/Super Extra.jpg" alt="Imagen Super Extra" />
+					<h3>Super Extra</h3>
+				</div>
+				<div class="carta">
+					<img src="img/Romero.jpg" alt="Imagen Romero" />
+					<h3>Romero</h3>
+				</div>
+				<div class="carta">
+					<img src="img/Super99.jpg" alt="Imagen Super 99" />
+					<h3>Super 99</h3>
+				</div>
+				<div class="carta">
+					<img src="img/Pricesmart.png" alt="Imagen PriceMart" />
+					<h3>PriceMart</h3>
+				</div>
+				<div class="carta">
+					<img src="img/Super Extra.jpg" alt="Imagen Super Extra" />
+					<h3>Super Extra</h3>
+				</div>
+				<div class="carta">
+					<img src="img/Romero.jpg" alt="Imagen Romero" />
+					<h3>Romero</h3>
+				</div>
 			</div>
 		</section>
-		
+
 		<section class="categorias" id="categorias">
-			<div class="categoria">
-				<img src="" alt="Imagen Alimentos">
-				<span>Alimentos</span>
+			<div class="encabezado">
+				<h2>Categorias Disponibles</h2>
 			</div>
-			<div class="categoria">
-				<img src="" alt="Imagen Electrodomesticos">
-				<span>Electrodomesticos</span>
-			</div>
-			<div class="categoria">
-				<img src="" alt="Imagen Escuela">
-				<span>Escuela</span>
-			</div>
-			<div class="categoria">
-				<img src="" alt="Imagen Juguetes">
-				<span>Juguetes</span>
+			<div class="contenido">
+				<div class="carta">
+					<img src="img/Alimentos.png" alt="Imagen Alimentos" />
+					<h3>Alimentos</h3>
+				</div>
+				<div class="carta">
+					<img
+						src="img/Electrodomesticos.png"
+						alt="Imagen Electrodomesticos"
+					/>
+					<h3>Electro<br />domesticos</h3>
+				</div>
+				<div class="carta">
+					<img src="img/Escuela.png" alt="Imagen Escuela" />
+					<h3>Escuela</h3>
+				</div>
+				<div class="carta">
+					<img src="img/Jueguetes.png" alt="Imagen Juguetes" />
+					<h3>Juguetes</h3>
+				</div>
+				<div class="carta">
+					<img src="img/Alimentos.png" alt="Imagen Alimentos" />
+					<h3>Alimentos</h3>
+				</div>
+				<div class="carta">
+					<img
+						src="img/Electrodomesticos.png"
+						alt="Imagen Electrodomesticos"
+					/>
+					<h3>Electro<br />domesticos</h3>
+				</div>
+				<div class="carta">
+					<img src="img/Escuela.png" alt="Imagen Escuela" />
+					<h3>Escuela</h3>
+				</div>
+				<div class="carta">
+					<img src="img/Jueguetes.png" alt="Imagen Juguetes" />
+					<h3>Juguetes</h3>
+				</div>
 			</div>
 		</section>
-		
+
 		<section class="productos" id="productos">
-			<div class="producto">
-				<img src="" alt="Imagen Microondas">
-				<span>Microondas</span>
-				<div class="etiquetas">
-					<span class="tienda">PriceMart</span>
-					<span class="categoria">Electrodomesticos</span>
+			<div class="encabezado">
+				<h2>Productos Disponibles</h2>
+			</div>
+			<div class="contenido">
+				<div class="carta">
+					<img src="img/Microondas.png" alt="Imagen Microondas" />
+					<h3>Microondas</h3>
+					<ul class="etiquetas">
+						<li class="etiqueta categoria">Electrodomesticos</li>
+						<li class="etiqueta tienda">PriceMart</li>
+						<li class="etiqueta tienda">Super 99</li>
+						<li class="etiqueta tienda">Romero</li>
+					</ul>
+				</div>
+				<div class="carta">
+					<img src="img/Microondas.png" alt="Imagen Microondas" />
+					<h3>Microondas</h3>
+					<ul class="etiquetas">
+						<li class="etiqueta categoria">Electrodomesticos</li>
+						<li class="etiqueta tienda">PriceMart</li>
+						<li class="etiqueta tienda">Super 99</li>
+						<li class="etiqueta tienda">Romero</li>
+					</ul>
+				</div>
+				<div class="carta">
+					<img src="img/Microondas.png" alt="Imagen Microondas" />
+					<h3>Microondas</h3>
+					<ul class="etiquetas">
+						<li class="etiqueta categoria">Electrodomesticos</li>
+						<li class="etiqueta tienda">PriceMart</li>
+						<li class="etiqueta tienda">Super 99</li>
+						<li class="etiqueta tienda">Romero</li>
+					</ul>
+				</div>
+				<div class="carta">
+					<img src="img/Microondas.png" alt="Imagen Microondas" />
+					<h3>Microondas</h3>
+					<ul class="etiquetas">
+						<li class="etiqueta categoria">Electrodomesticos</li>
+						<li class="etiqueta tienda">PriceMart</li>
+						<li class="etiqueta tienda">Super 99</li>
+						<li class="etiqueta tienda">Romero</li>
+					</ul>
 				</div>
 			</div>
 		</section>
 
 		<footer>
-			<div class="informacion-materia">
-				<span>Curso:</span>
-				<span>Base de Datos 2</span>
-				<span>Profesor:</span>
-				<span>Baltazar</span>
-			</div>
-			<div class="integrantes">
-				<span>Integrantes:</span>
-				<span>Ricardo Sanjur</span>
-				<span>Jeisson Paredes</span>
-				<span>Edwar Gonzalez</span>
-			</div>
-
+			<ul class="informacion-materia">
+				<h4>Curso:</h4>
+				<li>Base de Datos 2</li>
+				<h4>Profesor:</h4>
+				<li>Baltazar</li>
+			</ul>
+			<ul class="integrantes">
+				<h4>Integrantes:</h4>
+				<li>Ricardo Sanjur</li>
+				<li>Jeisson Paredes</li>
+				<li>Edwar Gonzalez</li>
+			</ul>
 		</footer>
 	</body>
 </html>

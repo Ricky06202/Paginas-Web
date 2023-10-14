@@ -15,13 +15,18 @@
 
 	--boton: #FEFBF3;
 	--boton-hover: #f1ede2;
+
+	--carta-fondo: #FEFBF3;
+	--carta-hover: #f1ede2;
 }
 
 body{
+	align-items: center;
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
 	background-color: var(--body);
+	min-width: min-content;
 }
 
 header{
@@ -32,6 +37,8 @@ header{
 	justify-content: space-between;
 	align-items: center;
 	gap: 1em;
+	min-width: 100%;
+
 }
 
 header img{
@@ -44,6 +51,7 @@ header nav{
 	border-radius: 1em;
 	overflow: hidden;
 	border-bottom: 1px solid black;
+	box-shadow: 2px 2px 5px grey;
 }
 
 header nav a{
@@ -78,8 +86,9 @@ header nav a:hover{
 	width: 100%;
 	border: none;
 	font-weight: bold;
-	font-size: 2em;
+	font-size: 1.5em;
 	background-color: var(--boton);
+	cursor: pointer;
 }
 
 .cuenta button:hover{
@@ -97,18 +106,177 @@ header nav a:hover{
 
 section {
 	padding: 2em;
+	display: flex;
+	min-height: 90vh;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2em;
+	max-width: 800px;
+}
+
+section:not(.presentacion){
+	min-height: min-content;
+	margin: 2em 0;
+}
+
+.presentacion{
+	gap: 3em;
+}
+
+.presentacion h2{
+	font-size: 3em;
+	text-align: center;
+}
+
+.presentacion button{
+	cursor: pointer;
+	font-size: 2em;
+	padding: .4em;
+	border-radius: 15px;
+	border: 1px solid #0000007e;
+	background-color: var(--enfasis);
+	color: white;
+	font-weight: bold;
+	box-shadow: 2px 2px 10px #0000007e;
+}
+
+.presentacion button:hover{
+	background-color: var(--enfasis-hover);
+}
+
+
+.encabezado{
+	font-size: 1.5em;
+}
+
+.contenido{
+	align-items: center;
+	justify-content: center;
+	height: fit-content;
+	display: flex;
+	gap: 1em;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+.carta{
+	display: flex;
+	flex-direction: column;
+	gap: .5em;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: var(--carta-fondo);
+	padding: 1em;
+	border-radius: 20px;
+	box-shadow: 2px 2px 10px;
+	height: 200px;
+	cursor: pointer;
+}
+
+.carta:hover{
+	background-color: var(--carta-hover);
+}
+
+.productos .carta{
+	height: min-content;
+	max-width: 13em;
+}
+
+.carta img{
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+}
+
+.carta h3{
+	text-align: center;
+}
+
+.etiquetas{
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	text-align: center;
+	min-height: min-content;
+	gap: .2em;
+}
+
+.etiqueta{
+	color: white;
+	background-color: grey;
+	padding: .2em .7em;
+	border-radius: 2em;
+}
+
+.categoria{
+	background-color: lightgreen;
+	color: black;
+}
+
+.tienda{
+	background-color: lightskyblue;
+	color: black;
 }
 
 footer{
 	background-color: var(--footer);
 	padding: 2em;
 	display: flex;
-	flex-direction: column;
 	gap: 1em;
 	align-items: center;
+	justify-content: space-evenly;
+	min-width: 100%;
 }
 
-footer div{
+footer ul{
 	display: flex;
 	flex-direction: column;
+	box-shadow: 2px 2px 5px;
+	border-radius: 10px;
+	padding: 1em;
+	list-style: none;
+	height: 100%;
+	width: 250px;
+	min-width: 200px;
+}
+
+footer li{
+	font-size: 1.2em;
+	margin-left: 1em;
+}
+
+footer h4{
+	font-size: 1.3em;
+}
+
+@media(min-width: 800px){
+	header{
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+	header img{
+		height: 5em;
+		padding: 0 4.2em;
+	}
+	header nav{
+		width: 50%;
+	}
+	.cuenta{
+		width: 15%;
+		flex-direction: column;
+		border-radius: 0;
+		gap: 1em;
+		box-shadow: none;
+		padding: 1em;
+	}
+
+	.cuenta button{
+		font-size: 1.1em;
+		box-shadow: 2px 2px 5px black;
+	}
 }
